@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #716262;
+}
+
+/* Apply styles to the header */
+header {
+    /* margin-top: 8px; */
+    width: 100%;
+    background-color: rgba(40, 11, 68, 0.5); /* Semi-transparent black */
+    padding: 20px 0;
+    display: flex; 
+    justify-content: space-between; /* Align items horizontally with space between them */
+    align-items: center; /* Center items vertically */
+}
+
+/* Style the h1 element within the header */
+header h1 {
+    margin: 0;
+    color: #fff; /* Text color for the header */
+}
+
+/* Style the navigation links */
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use flexbox for layout */
+}
+
+nav ul li {
+    margin-right: 70px; /* Add some spacing between list items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Text color for navigation links */
+    font-size: 16px; /* Font size for navigation links */
+}
+
+/* Apply styles to the form */
+form {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration-color: rgb(94, 86, 86);
+    
+}
+h2 {
+    color:#007bff; /* Change to your desired color code */
+}
+
+/* Style the input field */
+input {
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Style the button */
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Change button color on hover */
+button:hover {
+    background-color: #0056b3;
+}

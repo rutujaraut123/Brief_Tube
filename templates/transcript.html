@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript and Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .content-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .content-box p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+    {% if transcript %}
+    <div class="content-box">
+        <h1>Transcript</h1>
+        <p>{{ transcript | safe }}</p>
+        <div class="button-container">
+            <form action="/get_summary" method="post">
+                <input type="hidden" name="transcript" value="{{ transcript }}">
+                <button type="submit">Get Summary</button>
+            </form>
+            <form action="/translate_to_marathi" method="POST">
+                <input type="hidden" name="transcript" value="{{ transcript }}">
+                <button type="submit">Convert to Marathi</button>
+            </form>
+            <form action="/translate_to_hindi" method="POST">
+                <input type="hidden" name="transcript" value="{{ transcript }}">
+                <button type="submit">Convert to Hindi</button>
+            </form>
+            <form action="/translate_to_english" method="POST">
+                <input type="hidden" name="transcript" value="{{ transcript }}">
+                <button type="submit">Convert to English</button>
+            </form>
+            <form action="/generate_pdf" method="post">
+                <input type="hidden" name="transcript" value="{{ transcript }}">
+                <button type="submit">Generate PDF</button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if translated_transcript %}
+    <div class="content-box">
+        <h2>Translated Transcript</h2>
+        <p>{{ translated_transcript }}</p>
+    </div>
+    {% endif %}
+
+    {% if summary %}
+    <div class="content-box">
+        <h2>Summary</h2>
+        <p id="summary-content">{{ summary | safe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - YouTube Transcript Extractor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+            background-image: url("https://www.psdgraphics.com/file/dark-blue-abstract.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            animation: fadeInBackground 2s ease-in-out;
+        }
+
+        @keyframes fadeInBackground {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            background: linear-gradient(45deg, #ffffff, #00d4ff); /* Changed gradient to lighter colors */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Added a strong shadow for better contrast */
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #007bff, 0 0 20px #00d4ff, 0 0 30px #007bff;
+            }
+            to {
+                text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 60px #007bff;
+            }
+        }
+
+        .content-box {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: rgba(255, 251, 251, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideIn 1.5s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        h2 {
+            color: #0056b3;
+            margin-top: 30px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .feature-list li:before {
+            content: '✔';
+            color: #007bff;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        .feature-list li:hover {
+            color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 91, 187, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>About Us</h1>
+
+    <div class="content-box">
+        <p>Welcome to the <strong>YouTube Transcript Extractor</strong> – a powerful tool designed to simplify how you interact with YouTube videos by making their content more accessible and manageable. Whether you are looking to transcribe a video, extract key information, or download a detailed PDF report, our platform has you covered.</p>
+
+        <h2>What We Offer</h2>
+        <p>Our tool provides the following features to enhance your YouTube video experience:</p>
+
+        <ul class="feature-list">
+            <li><strong>Transcript Extraction:</strong> Quickly extract transcripts from YouTube videos in multiple languages, including Hindi and English.</li>
+            <li><strong>PDF Downloads:</strong> Once the transcript is retrieved, you can download it as a PDF for easy offline reference or sharing.</li>
+            <li><strong>Keyword Highlighting:</strong> Our system highlights important keywords from the transcript, allowing you to get more insights on specific terms by linking them to further resources.</li>
+            <li><strong>Summary Generation:</strong> Need a quick overview? We generate concise summaries of the video content to save you time.</li>
+        </ul>
+
+        <h2>Why Choose Us?</h2>
+        <p>In today’s fast-paced world, consuming content efficiently is essential. Our YouTube Transcript Extractor allows you to quickly access video content, even when watching isn't feasible. With the ability to highlight keywords and download content as a PDF, you can enhance your research, learning, or documentation processes with ease.</p>
+
+        <div class="button-container">
+            <a href="/"><button>Back to Home</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Need more info? Visit our <a href="/">Home</a> or <a href="https://translate.google.com/">Google Translate</a> for translation support.</p>
+    </footer>
+
+</body>
+</html>
